@@ -1,0 +1,301 @@
+<svg width="900" height="2380" viewBox="0 0 900 2380"
+     xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#050509"/>
+    <stop offset="52%" stop-color="#0d0615"/>
+    <stop offset="100%" stop-color="#170522"/>
+  </linearGradient>
+
+  <linearGradient id="purple" x1="0" x2="1">
+    <stop offset="0%" stop-color="#581c87"/>
+    <stop offset="50%" stop-color="#c084fc"/>
+    <stop offset="100%" stop-color="#581c87"/>
+  </linearGradient>
+
+  <linearGradient id="blade" x1="0" x2="1">
+    <stop offset="0%" stop-color="#52525b"/>
+    <stop offset="40%" stop-color="#f4f4f5"/>
+    <stop offset="65%" stop-color="#d8b4fe"/>
+    <stop offset="100%" stop-color="#52525b"/>
+  </linearGradient>
+
+  <radialGradient id="gem">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="35%" stop-color="#e9d5ff"/>
+    <stop offset="70%" stop-color="#a855f7"/>
+    <stop offset="100%" stop-color="#581c87"/>
+  </radialGradient>
+
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#ffffff" opacity=".018"/>
+  </pattern>
+</defs>
+
+<style>
+  .mono { font-family:"JetBrains Mono","Courier New",monospace; }
+  .ui { font-family:Arial,Helvetica,sans-serif; }
+  .serif { font-family:Georgia,"Times New Roman",serif; }
+  .white { fill:#f4f4f5; }
+  .muted { fill:#a1a1aa; }
+  .purple { fill:#c084fc; }
+  .green { fill:#55ff88; }
+  .panel { fill:#090711; stroke:#552273; stroke-width:1.2; }
+  .sectionTitle { fill:#c084fc; font-weight:700; letter-spacing:2px; }
+  .small { font-size:10px; }
+
+  .pulse { animation:pulse 1.7s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+
+  .titleGlow { animation:titleGlow 2.6s ease-in-out infinite; }
+  @keyframes titleGlow {
+    0%,100%{opacity:.72}
+    50%{opacity:1;filter:url(#glow)}
+  }
+
+  .scanner { animation:scan 5s linear infinite; }
+  @keyframes scan {
+    from{transform:translateX(-220px)}
+    to{transform:translateX(1120px)}
+  }
+
+  .float { animation:float 4s ease-in-out infinite; }
+  @keyframes float {
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-5px)}
+  }
+
+  .reveal { opacity:0; animation:reveal 18s infinite; }
+  .r1{animation-delay:.4s}.r2{animation-delay:1.2s}.r3{animation-delay:2s}
+  .r4{animation-delay:2.8s}.r5{animation-delay:3.6s}.r6{animation-delay:4.4s}
+  .r7{animation-delay:5.2s}.r8{animation-delay:6s}.r9{animation-delay:6.8s}
+  .r10{animation-delay:7.6s}.r11{animation-delay:8.4s}.r12{animation-delay:9.2s}
+
+  @keyframes reveal {
+    0%{opacity:0;transform:translateY(5px)}
+    5%{opacity:1;transform:translateY(0)}
+    82%{opacity:1}
+    96%,100%{opacity:0}
+  }
+
+  .swordL { transform-origin:90px 1270px; animation:swordL 4s ease-in-out infinite; }
+  .swordR { transform-origin:810px 1270px; animation:swordR 4s ease-in-out infinite; }
+  @keyframes swordL { 0%,100%{transform:rotate(-3deg)} 50%{transform:rotate(-1deg) translateY(-5px)} }
+  @keyframes swordR { 0%,100%{transform:rotate(3deg)} 50%{transform:rotate(1deg) translateY(-5px)} }
+
+  .eq1{animation:eq1 .6s ease-in-out infinite alternate;transform-origin:bottom}
+  .eq2{animation:eq2 .8s ease-in-out infinite alternate;transform-origin:bottom}
+  .eq3{animation:eq3 .5s ease-in-out infinite alternate;transform-origin:bottom}
+  @keyframes eq1{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+  @keyframes eq2{from{transform:scaleY(.5)}to{transform:scaleY(1.25)}}
+  @keyframes eq3{from{transform:scaleY(.25)}to{transform:scaleY(.85)}}
+
+  .progress { transform-origin:left; animation:load 14s infinite; }
+  @keyframes load {
+    0%{transform:scaleX(0)}
+    25%{transform:scaleX(.25)}
+    55%{transform:scaleX(.6)}
+    80%{transform:scaleX(1)}
+    94%{transform:scaleX(1)}
+    100%{transform:scaleX(0)}
+  }
+</style>
+
+<!-- MAIN BACKGROUND -->
+<rect x="8" y="8" width="884" height="2364" rx="20" fill="url(#bg)" stroke="#7e22ce" stroke-width="2"/>
+<rect x="10" y="10" width="880" height="2360" rx="18" fill="none" stroke="#a855f7" opacity=".18" filter="url(#glow)"/>
+
+<!-- GLOBAL HEADER -->
+<text x="30" y="38" class="mono purple small">LAZARUS // PERSONAL INTERFACE</text>
+<circle cx="820" cy="34" r="4" fill="#55ff88" class="pulse"/>
+<text x="832" y="38" class="mono green" font-size="9">ONLINE</text>
+<line x1="30" y1="55" x2="870" y2="55" stroke="url(#purple)" opacity=".55"/>
+
+<!-- ================= PROFILE ================= -->
+<g transform="translate(0 70)">
+  <text x="450" y="70" text-anchor="middle" class="ui white titleGlow" font-size="34" font-weight="700">Hi there 👋, I'm LeValt</text>
+  <text x="450" y="105" text-anchor="middle" class="serif purple" font-size="18" font-style="italic">Learn To Love Myself Before Loving Someone Else</text>
+  <text x="450" y="138" text-anchor="middle" class="mono muted" font-size="12">&gt; Love to establish new things and destroy them 🕵</text>
+
+  <rect x="55" y="175" width="790" height="245" rx="14" class="panel"/>
+  <text x="80" y="210" class="mono purple" font-size="12">ABOUT_ME.init()</text>
+  <text x="80" y="250" class="ui white reveal r1" font-size="15">Programming · Reverse Engineering · Cybersecurity</text>
+  <text x="80" y="282" class="ui muted reveal r2" font-size="14">Curious about how things work beneath the surface.</text>
+  <text x="80" y="314" class="ui muted reveal r3" font-size="14">Build → Break → Understand → Rebuild.</text>
+  <text x="80" y="346" class="ui muted reveal r4" font-size="14">Learning C++, Lua, Assembly, Unity &amp; Game Development.</text>
+
+  <line x1="80" y1="372" x2="820" y2="372" stroke="#3b1b4c"/>
+  <text x="450" y="395" text-anchor="middle" class="serif white" font-size="12" font-style="italic">“I have no special talent. I am only passionately curious.”</text>
+  <text x="450" y="417" text-anchor="middle" class="serif muted" font-size="11" font-style="italic">The important thing is not to stop questioning.</text>
+</g>
+
+<!-- SECTION DIVIDER -->
+<line x1="55" y1="535" x2="845" y2="535" stroke="url(#purple)" opacity=".45"/>
+
+<!-- ================= TECH STACK ================= -->
+<g transform="translate(0 555)">
+  <text x="450" y="45" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="26">TECH STACK</text>
+  <text x="450" y="68" text-anchor="middle" class="mono muted" font-size="10">TOOLS I REACH FOR TO BUILD, BREAK, REVERSE &amp; SHIP</text>
+
+  <line x1="450" y1="95" x2="450" y2="515" stroke="#3f294b" opacity=".6"/>
+
+  <!-- left -->
+  <text x="65" y="125" class="ui purple" font-size="17" font-weight="700">⌘ Languages</text>
+  <text x="65" y="151" class="ui muted" font-size="13">C · C++ · C# · Rust · Go · Python</text>
+  <text x="65" y="173" class="ui muted" font-size="13">TypeScript · JavaScript · Dart · Java · Kotlin</text>
+  <text x="65" y="195" class="ui muted" font-size="13">Swift · Assembly</text>
+
+  <text x="65" y="240" class="ui purple" font-size="17" font-weight="700">▤ Backend &amp; APIs</text>
+  <text x="65" y="266" class="ui muted" font-size="13">Node.js · NestJS · Fastify · Bun · Express</text>
+  <text x="65" y="288" class="ui muted" font-size="13">Django · FastAPI · Flask</text>
+  <text x="65" y="310" class="ui muted" font-size="13">REST · GraphQL · WebSockets · gRPC</text>
+  <text x="65" y="332" class="ui muted" font-size="13">JWT · OAuth2 · Authentication Systems</text>
+
+  <text x="65" y="377" class="ui purple" font-size="17" font-weight="700">▣ Frontend</text>
+  <text x="65" y="403" class="ui muted" font-size="13">React · Next.js · Vue · Svelte · Astro · Remix</text>
+  <text x="65" y="425" class="ui muted" font-size="13">TailwindCSS · Radix UI · shadcn/ui · Chakra UI</text>
+
+  <text x="65" y="470" class="ui purple" font-size="17" font-weight="700">▯ Mobile</text>
+  <text x="65" y="496" class="ui muted" font-size="13">Flutter · React Native · Android</text>
+
+  <!-- right -->
+  <text x="485" y="125" class="ui purple" font-size="17" font-weight="700">◉ Databases</text>
+  <text x="485" y="151" class="ui muted" font-size="13">PostgreSQL · MySQL · MariaDB · MongoDB</text>
+  <text x="485" y="173" class="ui muted" font-size="13">SQLite · Redis · Supabase · Firebase</text>
+  <text x="485" y="195" class="ui muted" font-size="13">Prisma · TypeORM · Sequelize</text>
+
+  <text x="485" y="240" class="ui purple" font-size="17" font-weight="700">◈ Infra &amp; DevOps</text>
+  <text x="485" y="266" class="ui muted" font-size="13">Docker · Nginx · GitHub Actions · CI/CD · PM2</text>
+  <text x="485" y="288" class="ui muted" font-size="13">Vercel · Netlify · Sentry · Datadog</text>
+  <text x="485" y="310" class="ui muted" font-size="13">Bash · Make · PowerShell</text>
+
+  <text x="485" y="355" class="ui purple" font-size="17" font-weight="700">▧ Reverse Engineering</text>
+  <text x="485" y="381" class="ui muted" font-size="13">x86 · ARM Assembly · Ghidra · IDA</text>
+  <text x="485" y="403" class="ui muted" font-size="13">Binary Ninja · Radare2 · Instrumentation</text>
+  <text x="485" y="425" class="ui muted" font-size="13">VM / Bytecode Analysis · Memory Forensics</text>
+
+  <text x="485" y="470" class="ui purple" font-size="17" font-weight="700">⌘ ML / Vision</text>
+  <text x="485" y="496" class="ui muted" font-size="13">PyTorch · TensorFlow · OpenCV · NumPy · Pandas</text>
+</g>
+
+<line x1="55" y1="1100" x2="845" y2="1100" stroke="url(#purple)" opacity=".45"/>
+
+<!-- ================= WORDS ================= -->
+<g transform="translate(0 1120)">
+  <text x="450" y="45" text-anchor="middle" class="serif sectionTitle titleGlow" font-size="25" letter-spacing="4">WORDS I REMEMBER</text>
+  <text x="450" y="68" text-anchor="middle" class="mono muted" font-size="9">LAZARUS // MEMORY ARCHIVE_004</text>
+
+  <!-- swords -->
+  <g class="swordL">
+    <path d="M90 95 L103 125 L98 360 L90 382 L82 360 L77 125 Z" fill="url(#blade)" stroke="#c084fc" stroke-width="2" filter="url(#glow)"/>
+    <line x1="90" y1="118" x2="90" y2="350" stroke="#fff" opacity=".5"/>
+    <path d="M90 372 L74 362 L58 370 L48 363 L56 381 L77 386 L90 400 L103 386 L124 381 L132 363 L122 370 L106 362 Z" fill="#111118" stroke="#c084fc" stroke-width="2"/>
+    <polygon points="90,373 101,384 90,396 79,384" fill="url(#gem)" filter="url(#glow)"/>
+    <rect x="84" y="400" width="12" height="60" rx="4" fill="#180d20" stroke="#9333ea"/>
+    <circle cx="90" cy="469" r="10" fill="#111118" stroke="#c084fc"/>
+    <circle cx="90" cy="469" r="4" fill="url(#gem)" class="pulse"/>
+  </g>
+
+  <g class="swordR">
+    <path d="M810 95 L823 125 L818 360 L810 382 L802 360 L797 125 Z" fill="url(#blade)" stroke="#c084fc" stroke-width="2" filter="url(#glow)"/>
+    <line x1="810" y1="118" x2="810" y2="350" stroke="#fff" opacity=".5"/>
+    <path d="M810 372 L794 362 L778 370 L768 363 L776 381 L797 386 L810 400 L823 386 L844 381 L852 363 L842 370 L826 362 Z" fill="#111118" stroke="#c084fc" stroke-width="2"/>
+    <polygon points="810,373 821,384 810,396 799,384" fill="url(#gem)" filter="url(#glow)"/>
+    <rect x="804" y="400" width="12" height="60" rx="4" fill="#180d20" stroke="#9333ea"/>
+    <circle cx="810" cy="469" r="10" fill="#111118" stroke="#c084fc"/>
+    <circle cx="810" cy="469" r="4" fill="url(#gem)" class="pulse"/>
+  </g>
+
+  <text x="450" y="125" text-anchor="middle" class="serif white reveal r1" font-size="13" font-style="italic">When I was sixteen, I won a great victory.</text>
+  <text x="450" y="150" text-anchor="middle" class="serif white reveal r2" font-size="13" font-style="italic">I felt in that moment I would live to be a hundred.</text>
+  <text x="450" y="175" text-anchor="middle" class="serif white reveal r3" font-size="13" font-style="italic">Now I know I shall not see thirty.</text>
+
+  <text x="450" y="215" text-anchor="middle" class="serif muted reveal r4" font-size="12.5" font-style="italic">None of us know our end, really,</text>
+  <text x="450" y="239" text-anchor="middle" class="serif muted reveal r5" font-size="12.5" font-style="italic">or what hand will guide us there.</text>
+
+  <text x="450" y="285" text-anchor="middle" class="serif white reveal r6" font-size="12.5" font-style="italic">A king may move a man, a father may claim a son,</text>
+  <text x="450" y="309" text-anchor="middle" class="serif white reveal r7" font-size="12.5" font-style="italic">but that man can also move himself,</text>
+  <text x="450" y="333" text-anchor="middle" class="serif white reveal r8" font-size="12.5" font-style="italic">and only then does that man truly begin his own game.</text>
+
+  <text x="450" y="379" text-anchor="middle" class="serif muted reveal r9" font-size="12.5" font-style="italic">Remember that howsoever you are played or by whom,</text>
+  <text x="450" y="403" text-anchor="middle" class="serif muted reveal r10" font-size="12.5" font-style="italic">your soul is in your keeping alone.</text>
+
+  <text x="450" y="455" text-anchor="middle" class="serif purple titleGlow" font-size="16" letter-spacing="3">— KING BALDWIN IV —</text>
+</g>
+
+<line x1="55" y1="1630" x2="845" y2="1630" stroke="url(#purple)" opacity=".45"/>
+
+<!-- ================= SPOTIFY ================= -->
+<g transform="translate(0 1650)">
+  <text x="450" y="45" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="24">♫ SPOTIFY // NOW PLAYING</text>
+  <text x="450" y="67" text-anchor="middle" class="mono muted" font-size="9">LAZARUS // AUDIO INTERFACE</text>
+
+  <rect x="150" y="95" width="600" height="120" rx="14" class="panel"/>
+  <text x="180" y="125" class="mono purple" font-size="11">user@lazarus:~$ spotify --connect</text>
+  <text x="180" y="155" class="mono white" font-size="11">STREAM STATUS:</text>
+  <text x="285" y="155" class="mono green pulse" font-size="11">CONNECTED</text>
+  <text x="180" y="182" class="mono muted" font-size="10">external Spotify card displayed below this SVG</text>
+
+  <g transform="translate(640 180)">
+    <rect x="0" y="-20" width="6" height="20" rx="2" fill="#c084fc" class="eq1"/>
+    <rect x="12" y="-34" width="6" height="34" rx="2" fill="#9333ea" class="eq2"/>
+    <rect x="24" y="-17" width="6" height="17" rx="2" fill="#c084fc" class="eq3"/>
+    <rect x="36" y="-28" width="6" height="28" rx="2" fill="#a855f7" class="eq1"/>
+    <rect x="48" y="-22" width="6" height="22" rx="2" fill="#c084fc" class="eq2"/>
+  </g>
+
+  <rect x="240" y="235" width="420" height="8" rx="4" fill="#21112b"/>
+  <rect x="240" y="235" width="420" height="8" rx="4" fill="url(#purple)" class="progress" filter="url(#glow)"/>
+</g>
+
+<line x1="55" y1="1945" x2="845" y2="1945" stroke="url(#purple)" opacity=".45"/>
+
+<!-- ================= TERMINAL ================= -->
+<g transform="translate(0 1965)">
+  <text x="450" y="40" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="26">⚡ LAZARUS EMPIRES</text>
+  <text x="450" y="62" text-anchor="middle" class="mono purple" font-size="12">0x // RESURRECTION PROTOCOL</text>
+
+  <rect x="45" y="85" width="810" height="300" rx="14" fill="#08070c" stroke="#7e22ce" stroke-width="1.5"/>
+  <rect x="45" y="85" width="810" height="42" rx="14" fill="#10091a"/>
+  <circle cx="70" cy="106" r="5" fill="#ef4444"/>
+  <circle cx="88" cy="106" r="5" fill="#eab308"/>
+  <circle cx="106" cy="106" r="5" fill="#22c55e"/>
+  <text x="125" y="111" class="mono purple" font-size="11">LAZARUS_TERMINAL.exe</text>
+
+  <text x="70" y="155" class="mono purple reveal r1" font-size="12">&gt; awakening LAZARUS protocol...</text>
+  <text x="70" y="180" class="mono green reveal r2" font-size="12">✓ core consciousness detected</text>
+  <text x="70" y="205" class="mono purple reveal r3" font-size="12">&gt; sudo resurrect --empire</text>
+  <text x="70" y="230" class="mono white reveal r4" font-size="12">loading forbidden_modules.dll...</text>
+  <text x="70" y="255" class="mono purple reveal r5" font-size="12">&gt; scanning memory sectors...</text>
+  <text x="70" y="280" class="mono green reveal r6" font-size="12">✓ 69,420 bytes of chaos found</text>
+  <text x="70" y="305" class="mono purple reveal r7" font-size="12">&gt; rm -rf /bugs/*</text>
+  <text x="70" y="330" class="mono white reveal r8" font-size="12">coffee++; sleep--;</text>
+  <text x="70" y="355" class="mono green reveal r9" font-size="12" filter="url(#glow)">LAZARUS EMPIRES // RESURRECTED</text>
+
+  <rect x="575" y="145" width="245" height="155" rx="8" fill="#090711" stroke="#552273"/>
+  <text x="595" y="170" class="mono purple" font-size="10">root@lazarus:~$ status</text>
+  <text x="595" y="195" class="mono white" font-size="10">ENTITY   : LAZARUS</text>
+  <text x="595" y="215" class="mono white" font-size="10">STATE    : RESURRECTED</text>
+  <text x="595" y="235" class="mono white" font-size="10">ACCESS   : ROOT</text>
+  <text x="595" y="255" class="mono white" font-size="10">UPTIME   : ∞</text>
+  <text x="595" y="275" class="mono green pulse" font-size="10">● EMPIRE ONLINE</text>
+</g>
+
+<!-- GLOBAL FOOTER -->
+<line x1="30" y1="2335" x2="870" y2="2335" stroke="#581c87" opacity=".5"/>
+<text x="35" y="2355" class="mono purple" font-size="9">LAZARUS_INTERFACE.bundle</text>
+<text x="450" y="2355" text-anchor="middle" class="mono muted" font-size="9">PROFILE // TECH // MEMORY // AUDIO // TERMINAL</text>
+<text x="810" y="2355" class="mono green pulse" font-size="9">[ READY ]</text>
+
+<rect x="0" y="2365" width="180" height="1" fill="url(#purple)" class="scanner" filter="url(#glow)"/>
+<rect x="8" y="8" width="884" height="2364" rx="20" fill="url(#scanlines)" pointer-events="none"/>
+</svg>
