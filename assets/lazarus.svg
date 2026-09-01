@@ -108,17 +108,287 @@
     94%{transform:scaleX(1)}
     100%{transform:scaleX(0)}
   }
+
+
+
+  /* ============================= */
+  /* INTRO DARKNESS EFFECT         */
+  /* ============================= */
+
+  .shadowOrb1 { animation: shadow1 7s ease-in-out infinite; }
+  .shadowOrb2 { animation: shadow2 9s ease-in-out infinite; }
+  .shadowOrb3 { animation: shadow3 11s ease-in-out infinite; }
+
+  @keyframes shadow1 {
+    0%,100% { transform: translate(0,0) scale(1); opacity:.18; }
+    50%     { transform: translate(75px,25px) scale(1.25); opacity:.34; }
+  }
+
+  @keyframes shadow2 {
+    0%,100% { transform: translate(0,0) scale(1); opacity:.12; }
+    50%     { transform: translate(-85px,35px) scale(1.35); opacity:.28; }
+  }
+
+  @keyframes shadow3 {
+    0%,100% { transform: translate(0,0) scale(.9); opacity:.10; }
+    50%     { transform: translate(40px,-25px) scale(1.3); opacity:.24; }
+  }
+
+  .darkMist {
+    animation: darkMist 8s ease-in-out infinite;
+  }
+
+  @keyframes darkMist {
+    0%,100% { opacity:.05; transform:translateX(-15px); }
+    50%     { opacity:.16; transform:translateX(20px); }
+  }
+
+
+  /* ============================= */
+  /* SWORD LIGHTNING AURA          */
+  /* ============================= */
+
+  .auraBolt {
+    fill:none;
+    stroke:#c084fc;
+    stroke-width:4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    filter:url(#glow);
+    stroke-dasharray:26 12;
+    animation:auraRun 1.15s linear infinite;
+  }
+
+  .auraBolt2 {
+    fill:none;
+    stroke:#9333ea;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    filter:url(#glow);
+    stroke-dasharray:18 10;
+    animation:auraRun2 .9s linear infinite;
+  }
+
+  .auraGlow {
+    fill:none;
+    stroke:#ffffff;
+    stroke-width:1.2;
+    opacity:.8;
+    stroke-dasharray:10 8;
+    animation:auraCore .65s linear infinite;
+  }
+
+  @keyframes auraRun {
+    from { stroke-dashoffset:0; opacity:.45; }
+    45%  { opacity:1; }
+    to   { stroke-dashoffset:-76; opacity:.45; }
+  }
+
+  @keyframes auraRun2 {
+    from { stroke-dashoffset:0; opacity:.35; }
+    50%  { opacity:1; }
+    to   { stroke-dashoffset:62; opacity:.35; }
+  }
+
+  @keyframes auraCore {
+    from { stroke-dashoffset:0; }
+    to   { stroke-dashoffset:-42; }
+  }
+
+
+  /* ============================= */
+  /* TERMINAL LARGE WORD STREAMS   */         */
+  /* ============================= */
+
+
+
+  /* ============================= */
+  /* SPOTIFY MUSIC NOTES           */
+  /* ============================= */
+
+  .musicNote1 { animation: musicFloat1 4s ease-in-out infinite; }
+  .musicNote2 { animation: musicFloat2 5s ease-in-out infinite; }
+  .musicNote3 { animation: musicFloat3 6s ease-in-out infinite; }
+
+  @keyframes musicFloat1 {
+    0%,100% { transform:translate(0,0) rotate(-8deg); opacity:.15; }
+    50%     { transform:translate(22px,-28px) rotate(8deg); opacity:.8; }
+  }
+
+  @keyframes musicFloat2 {
+    0%,100% { transform:translate(0,0) rotate(6deg); opacity:.12; }
+    50%     { transform:translate(-18px,-36px) rotate(-8deg); opacity:.75; }
+  }
+
+  @keyframes musicFloat3 {
+    0%,100% { transform:translate(0,0); opacity:.10; }
+    50%     { transform:translate(12px,-22px); opacity:.65; }
+  }
+
+
+
+  .termWord {
+    font-family:"JetBrains Mono","Courier New",monospace;
+    fill:#c084fc;
+    font-weight:700;
+    opacity:.42;
+    filter:url(#glow);
+    letter-spacing:3px;
+  }
+
+  .tw1 { animation:wordFloat1 5s linear infinite; }
+  .tw2 { animation:wordFloat2 6.5s linear infinite; }
+  .tw3 { animation:wordFloat3 7.5s linear infinite; }
+  .tw4 { animation:wordFloat4 5.8s linear infinite; }
+
+  @keyframes wordFloat1 {
+    0%{transform:translate(-80px,40px) rotate(-12deg);opacity:.15}
+    50%{opacity:.8}
+    100%{transform:translate(820px,-30px) rotate(8deg);opacity:.12}
+  }
+  @keyframes wordFloat2 {
+    0%{transform:translate(760px,20px) rotate(10deg);opacity:.12}
+    50%{opacity:.75}
+    100%{transform:translate(-120px,-50px) rotate(-10deg);opacity:.12}
+  }
+  @keyframes wordFloat3 {
+    0%{transform:translate(-60px,-20px) rotate(6deg);opacity:.10}
+    50%{opacity:.7}
+    100%{transform:translate(780px,45px) rotate(-8deg);opacity:.10}
+  }
+  @keyframes wordFloat4 {
+    0%{transform:translate(720px,-15px) rotate(-6deg);opacity:.12}
+    50%{opacity:.78}
+    100%{transform:translate(-100px,50px) rotate(9deg);opacity:.12}
+  }
+
+  .bigNote {
+    fill:#d8b4fe;
+    font-weight:700;
+    filter:url(#glow);
+    opacity:.75;
+  }
+
+  .bn1 { animation:bigNote1 4.2s ease-in-out infinite; }
+  .bn2 { animation:bigNote2 5.1s ease-in-out infinite; }
+  .bn3 { animation:bigNote3 5.8s ease-in-out infinite; }
+  .bn4 { animation:bigNote4 4.7s ease-in-out infinite; }
+
+  @keyframes bigNote1 {
+    0%,100% { transform:translate(0,0) rotate(-10deg) scale(1); opacity:.55; }
+    50% { transform:translate(35px,-24px) rotate(8deg) scale(1.15); opacity:1; }
+  }
+  @keyframes bigNote2 {
+    0%,100% { transform:translate(0,0) rotate(8deg) scale(1); opacity:.5; }
+    50% { transform:translate(-30px,-32px) rotate(-8deg) scale(1.12); opacity:.95; }
+  }
+  @keyframes bigNote3 {
+    0%,100% { transform:translate(0,0) scale(.95); opacity:.48; }
+    50% { transform:translate(20px,-18px) scale(1.18); opacity:.9; }
+  }
+  @keyframes bigNote4 {
+    0%,100% { transform:translate(0,0) rotate(-6deg); opacity:.52; }
+    50% { transform:translate(-18px,-28px) rotate(10deg); opacity:1; }
+  }
+
+
+  /* ============================= */
+  /* LARGE MOVING DARK CLOUDS      */
+  /* ============================= */
+  .cloudPurple {
+    fill:#2a073d;
+    opacity:.20;
+    filter:url(#glow);
+  }
+  .cloudBlack {
+    fill:#000000;
+    opacity:.28;
+  }
+  .cloud1 { animation:cloudMove1 18s ease-in-out infinite; }
+  .cloud2 { animation:cloudMove2 23s ease-in-out infinite; }
+  .cloud3 { animation:cloudMove3 20s ease-in-out infinite; }
+  .cloud4 { animation:cloudMove4 26s ease-in-out infinite; }
+
+  @keyframes cloudMove1 {
+    0%,100% { transform:translateX(-170px) translateY(0) scale(1); }
+    50% { transform:translateX(620px) translateY(22px) scale(1.18); }
+  }
+  @keyframes cloudMove2 {
+    0%,100% { transform:translateX(650px) translateY(0) scale(1.12); }
+    50% { transform:translateX(-190px) translateY(-18px) scale(.95); }
+  }
+  @keyframes cloudMove3 {
+    0%,100% { transform:translateX(-250px) translateY(10px) scale(.9); }
+    50% { transform:translateX(680px) translateY(-15px) scale(1.2); }
+  }
+  @keyframes cloudMove4 {
+    0%,100% { transform:translateX(700px) translateY(-5px) scale(1); }
+    50% { transform:translateX(-220px) translateY(20px) scale(1.15); }
+  }
+
 </style>
 
 <!-- MAIN BACKGROUND -->
 <rect x="8" y="8" width="884" height="2364" rx="20" fill="url(#bg)" stroke="#7e22ce" stroke-width="2"/>
 <rect x="10" y="10" width="880" height="2360" rx="18" fill="none" stroke="#a855f7" opacity=".18" filter="url(#glow)"/>
 
+
 <!-- GLOBAL HEADER -->
 <text x="30" y="38" class="mono purple small">LAZARUS // PERSONAL INTERFACE</text>
 <circle cx="820" cy="34" r="4" fill="#55ff88" class="pulse"/>
 <text x="832" y="38" class="mono green" font-size="9">ONLINE</text>
 <line x1="30" y1="55" x2="870" y2="55" stroke="url(#purple)" opacity=".55"/>
+
+
+
+<!-- LARGE MOVING CLOUD / SMOKE LAYERS -->
+<g pointer-events="none">
+  <!-- upper cloud -->
+  <g class="cloud1 cloudPurple">
+    <ellipse cx="100" cy="150" rx="125" ry="48"/>
+    <ellipse cx="185" cy="142" rx="105" ry="60"/>
+    <ellipse cx="270" cy="158" rx="135" ry="45"/>
+    <ellipse cx="175" cy="180" rx="175" ry="42"/>
+  </g>
+
+  <!-- second upper cloud -->
+  <g class="cloud2 cloudBlack">
+    <ellipse cx="120" cy="440" rx="145" ry="45"/>
+    <ellipse cx="230" cy="430" rx="115" ry="62"/>
+    <ellipse cx="325" cy="448" rx="150" ry="44"/>
+    <ellipse cx="220" cy="470" rx="190" ry="38"/>
+  </g>
+
+  <!-- middle purple cloud -->
+  <g class="cloud3 cloudPurple">
+    <ellipse cx="110" cy="1210" rx="150" ry="52"/>
+    <ellipse cx="220" cy="1195" rx="120" ry="68"/>
+    <ellipse cx="330" cy="1215" rx="160" ry="48"/>
+    <ellipse cx="220" cy="1240" rx="205" ry="43"/>
+  </g>
+
+  <!-- lower dark cloud -->
+  <g class="cloud4 cloudBlack">
+    <ellipse cx="115" cy="1850" rx="145" ry="48"/>
+    <ellipse cx="225" cy="1835" rx="120" ry="65"/>
+    <ellipse cx="335" cy="1855" rx="155" ry="46"/>
+    <ellipse cx="225" cy="1880" rx="200" ry="40"/>
+  </g>
+</g>
+
+<!-- INTRO DARKNESS FIELD -->
+<g pointer-events="none">
+  <circle cx="150" cy="165" r="115" fill="#000000" opacity=".18" class="shadowOrb1"/>
+  <circle cx="740" cy="205" r="150" fill="#000000" opacity=".14" class="shadowOrb2"/>
+  <circle cx="450" cy="310" r="190" fill="#120018" opacity=".12" class="shadowOrb3"/>
+  <path d="M40 120 C180 70 270 160 410 110 C560 55 690 155 860 95"
+        fill="none" stroke="#000000" stroke-width="42" opacity=".08"
+        class="darkMist"/>
+  <path d="M60 400 C220 330 360 440 520 360 C660 290 760 380 850 335"
+        fill="none" stroke="#16001d" stroke-width="34" opacity=".09"
+        class="darkMist"/>
+</g>
 
 <!-- ================= PROFILE ================= -->
 <g transform="translate(0 70)">
@@ -195,6 +465,23 @@
   <text x="450" y="68" text-anchor="middle" class="mono muted" font-size="9">LAZARUS // MEMORY ARCHIVE_004</text>
 
   <!-- swords -->
+  <!-- LIGHTNING AROUND SWORDS -->
+  <g pointer-events="none">
+    <path d="M64 110 L82 145 L72 178 L94 212 L78 247 L101 282 L85 318 L106 350"
+          class="lightningL"/>
+    <path d="M118 105 L103 145 L117 180 L96 216 L113 252 L94 290 L108 325 L93 360"
+          class="lightningCore"/>
+
+    <path d="M836 110 L818 145 L828 178 L806 212 L822 247 L799 282 L815 318 L794 350"
+          class="lightningR"/>
+    <path d="M782 105 L797 145 L783 180 L804 216 L787 252 L806 290 L792 325 L807 360"
+          class="lightningCore"/>
+
+    <circle cx="90" cy="180" r="3" fill="#ffffff" class="pulse" filter="url(#glow)"/>
+    <circle cx="810" cy="225" r="3" fill="#ffffff" class="pulse" filter="url(#glow)"/>
+  </g>
+
+
   <g class="swordL">
     <path d="M90 95 L103 125 L98 360 L90 382 L82 360 L77 125 Z" fill="url(#blade)" stroke="#c084fc" stroke-width="2" filter="url(#glow)"/>
     <line x1="90" y1="118" x2="90" y2="350" stroke="#fff" opacity=".5"/>
@@ -234,33 +521,8 @@
 
 <line x1="55" y1="1630" x2="845" y2="1630" stroke="url(#purple)" opacity=".45"/>
 
-<!-- ================= SPOTIFY ================= -->
-<g transform="translate(0 1650)">
-  <text x="450" y="45" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="24">♫ SPOTIFY // NOW PLAYING</text>
-  <text x="450" y="67" text-anchor="middle" class="mono muted" font-size="9">LAZARUS // AUDIO INTERFACE</text>
-
-  <rect x="150" y="95" width="600" height="120" rx="14" class="panel"/>
-  <text x="180" y="125" class="mono purple" font-size="11">user@lazarus:~$ spotify --connect</text>
-  <text x="180" y="155" class="mono white" font-size="11">STREAM STATUS:</text>
-  <text x="285" y="155" class="mono green pulse" font-size="11">CONNECTED</text>
-  <text x="180" y="182" class="mono muted" font-size="10">external Spotify card displayed below this SVG</text>
-
-  <g transform="translate(640 180)">
-    <rect x="0" y="-20" width="6" height="20" rx="2" fill="#c084fc" class="eq1"/>
-    <rect x="12" y="-34" width="6" height="34" rx="2" fill="#9333ea" class="eq2"/>
-    <rect x="24" y="-17" width="6" height="17" rx="2" fill="#c084fc" class="eq3"/>
-    <rect x="36" y="-28" width="6" height="28" rx="2" fill="#a855f7" class="eq1"/>
-    <rect x="48" y="-22" width="6" height="22" rx="2" fill="#c084fc" class="eq2"/>
-  </g>
-
-  <rect x="240" y="235" width="420" height="8" rx="4" fill="#21112b"/>
-  <rect x="240" y="235" width="420" height="8" rx="4" fill="url(#purple)" class="progress" filter="url(#glow)"/>
-</g>
-
-<line x1="55" y1="1945" x2="845" y2="1945" stroke="url(#purple)" opacity=".45"/>
-
 <!-- ================= TERMINAL ================= -->
-<g transform="translate(0 1965)">
+<g transform="translate(0 1665)">
   <text x="450" y="40" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="26">⚡ LAZARUS EMPIRES</text>
   <text x="450" y="62" text-anchor="middle" class="mono purple" font-size="12">0x // RESURRECTION PROTOCOL</text>
 
@@ -270,6 +532,18 @@
   <circle cx="88" cy="106" r="5" fill="#eab308"/>
   <circle cx="106" cy="106" r="5" fill="#22c55e"/>
   <text x="125" y="111" class="mono purple" font-size="11">LAZARUS_TERMINAL.exe</text>
+
+  <!-- LARGE RUNNING TERMINAL WORDS -->
+  <g pointer-events="none">
+    <text x="80" y="170" class="termWord tw1" font-size="30">BUILD</text>
+    <text x="170" y="225" class="termWord tw2" font-size="26">CREATE</text>
+    <text x="280" y="185" class="termWord tw3" font-size="24">LEARN</text>
+    <text x="390" y="245" class="termWord tw4" font-size="28">FOCUS</text>
+    <text x="500" y="175" class="termWord tw2" font-size="25">ADAPT</text>
+    <text x="610" y="235" class="termWord tw1" font-size="27">BREAK</text>
+    <text x="720" y="190" class="termWord tw3" font-size="24">IMPROVE</text>
+  </g>
+
 
   <text x="70" y="155" class="mono purple reveal r1" font-size="12">&gt; awakening LAZARUS protocol...</text>
   <text x="70" y="180" class="mono green reveal r2" font-size="12">✓ core consciousness detected</text>
@@ -288,6 +562,47 @@
   <text x="595" y="235" class="mono white" font-size="10">ACCESS   : ROOT</text>
   <text x="595" y="255" class="mono white" font-size="10">UPTIME   : ∞</text>
   <text x="595" y="275" class="mono green pulse" font-size="10">● EMPIRE ONLINE</text>
+</g>
+
+
+<line x1="55" y1="2070" x2="845" y2="2070" stroke="url(#purple)" opacity=".45"/>
+
+
+<!-- SPOTIFY BIG FLOATING MUSIC NOTES -->
+<g pointer-events="none">
+  <text x="65"  y="2180" class="bigNote bn1" font-size="72">♪</text>
+  <text x="130" y="2260" class="bigNote bn2" font-size="88">♫</text>
+  <text x="210" y="2205" class="bigNote bn3" font-size="56">♪</text>
+
+  <text x="690" y="2200" class="bigNote bn4" font-size="64">♫</text>
+  <text x="755" y="2265" class="bigNote bn1" font-size="90">♪</text>
+  <text x="825" y="2188" class="bigNote bn2" font-size="58">♫</text>
+
+  <text x="350" y="2168" class="bigNote bn3" font-size="42">♪</text>
+  <text x="500" y="2295" class="bigNote bn4" font-size="48">♬</text>
+</g>
+
+<!-- ================= SPOTIFY // FINAL ================= -->
+<g transform="translate(0 2090)">
+  <text x="450" y="45" text-anchor="middle" class="ui sectionTitle titleGlow" font-size="24">♫ SPOTIFY // NOW PLAYING</text>
+  <text x="450" y="67" text-anchor="middle" class="mono muted" font-size="9">LAZARUS // AUDIO INTERFACE</text>
+
+  <rect x="150" y="95" width="600" height="120" rx="14" class="panel"/>
+  <text x="180" y="125" class="mono purple" font-size="11">user@lazarus:~$ spotify --connect</text>
+  <text x="180" y="155" class="mono white" font-size="11">STREAM STATUS:</text>
+  <text x="285" y="155" class="mono green pulse" font-size="11">CONNECTED</text>
+  <text x="180" y="182" class="mono muted" font-size="10">live Spotify card continues directly below</text>
+
+  <g transform="translate(640 180)">
+    <rect x="0" y="-20" width="6" height="20" rx="2" fill="#c084fc" class="eq1"/>
+    <rect x="12" y="-34" width="6" height="34" rx="2" fill="#9333ea" class="eq2"/>
+    <rect x="24" y="-17" width="6" height="17" rx="2" fill="#c084fc" class="eq3"/>
+    <rect x="36" y="-28" width="6" height="28" rx="2" fill="#a855f7" class="eq1"/>
+    <rect x="48" y="-22" width="6" height="22" rx="2" fill="#c084fc" class="eq2"/>
+  </g>
+
+  <rect x="240" y="235" width="420" height="8" rx="4" fill="#21112b"/>
+  <rect x="240" y="235" width="420" height="8" rx="4" fill="url(#purple)" class="progress" filter="url(#glow)"/>
 </g>
 
 <!-- GLOBAL FOOTER -->
