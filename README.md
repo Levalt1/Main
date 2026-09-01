@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/lazarus-profile.svg" width="900" alt="LeValt Animated Profile">
+<img src="assets/assets/lazarus-profile.svg" width="900" alt="LeValt Animated Profile">
 
 </div>
 
