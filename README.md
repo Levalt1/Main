@@ -82,7 +82,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=1700&pause=500&color=A855F7&center=true&vCenter=true&repeat=true&width=700&lines=%5B+INITIALIZING+LAZARUS+EMPIRES...+%5D;%5B+LOADING+MODULES...+%5D;%5B+REVERSE+ENGINEERING+SYSTEM...+%5D;%5B+ACCESS+GRANTED+%5D" />
+<img src="<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=17&duration=1100&pause=350&color=A855F7&center=true&vCenter=true&repeat=true&width=850&height=55&lines=%E2%9F%A9+AWAKENING+LAZARUS+PROTOCOL+%E2%9F%A8;%E2%9F%A9+DECODING+MEMORY+SECTORS...+%E2%9F%A8;%E2%9F%A9+BREACHING+SYSTEM+BOUNDARIES...+%E2%9F%A8;%E2%9F%A9+RECONSTRUCTING+FROM+THE+VOID...+%E2%9F%A8;%E2%9F%A9+LAZARUS+EMPIRES+%2F%2F+RESURRECTED+%E2%9F%A8" alt="Lazarus Protocol" />" />
 
 </div>
 
