@@ -77,6 +77,29 @@
 </div>
 
 ---
+<h2 align="center">⚡ Lazarus Empires</h2>
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=1700&pause=500&color=A855F7&center=true&vCenter=true&repeat=true&width=700&lines=%5B+INITIALIZING+LAZARUS+EMPIRES...+%5D;%5B+LOADING+MODULES...+%5D;%5B+REVERSE+ENGINEERING+SYSTEM...+%5D;%5B+ACCESS+GRANTED+%5D" />
+
+</div>
+
+## ⚡ 0x
+
+```text
+ $$$$$$\             $$$$$$$\                                              $$\
+$$  __$$\            $$  __$$\                                             \__|
+$$ /  $$ |$$\   $$\  $$ |  $$ |$$\   $$\ $$$$$$$\   $$$$$$\  $$$$$$\$$$$\  $$\  $$$$$$$\
+$$ |  $$ |\$$\ $$  | $$ |  $$ |$$ |  $$ |$$  __$$\  \____$$\ $$  _$$  _$$\ $$ |$$  _____|
+$$ |  $$ | \$$$$  /  $$ |  $$ |$$ |  $$ |$$ |  $$ | $$$$$$$ |$$ / $$ / $$ |$$ |$$ /
+$$ |  $$ | $$  $$<   $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ | $$ | $$ |$$ |$$ |
+ $$$$$$  |$$  /\$$\  $$$$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ | $$ | $$ |$$ |\$$$$$$$\
+ \______/ \__/  \__| \_______/  \____$$ |\__|  \__| \_______|\__| \__| \__|\__| \_______|
+                               $$\   $$ |
+                               \$$$$$$  |
+                                \______/
+```
 
 <h2 align="center">⚡ Lazarus Empires</h2>
 
