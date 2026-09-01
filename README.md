@@ -101,8 +101,6 @@ $$ |  $$ | $$  $$<   $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ | $$ | $$ |$$ |$
                                 \______/
 ```
 
-<h2 align="center">⚡ Lazarus Empires</h2>
-
 <div align="center">
   <img src="./assets/lazarus-terminal.svg" width="900" alt="Lazarus Terminal">
 </div>
