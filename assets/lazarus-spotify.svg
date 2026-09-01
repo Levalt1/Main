@@ -1,6 +1,5 @@
-<svg width="900" height="520" viewBox="0 0 900 520"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="900" height="230" viewBox="0 0 900 230"
+     xmlns="http://www.w3.org/2000/svg">
 
   <defs>
 
@@ -28,10 +27,12 @@
              width="4"
              height="4"
              patternUnits="userSpaceOnUse">
+
       <rect width="4"
             height="1"
             fill="#ffffff"
             opacity=".018"/>
+
     </pattern>
 
   </defs>
@@ -89,35 +90,6 @@
 
       50% {
         opacity: 1;
-      }
-    }
-
-    .card-shell {
-      animation: floatCard 4s ease-in-out infinite;
-      transform-origin: 450px 295px;
-    }
-
-    @keyframes floatCard {
-      0%,100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-4px);
-      }
-    }
-
-    .card-glow {
-      animation: glowCard 2.5s ease-in-out infinite;
-    }
-
-    @keyframes glowCard {
-      0%,100% {
-        opacity: .2;
-      }
-
-      50% {
-        opacity: .75;
       }
     }
 
@@ -203,11 +175,30 @@
       }
     }
 
-    .scanner {
-      animation: scan 4s linear infinite;
+    .progress {
+      transform-origin: left;
+      animation: progress 8s linear infinite;
     }
 
-    @keyframes scan {
+    @keyframes progress {
+      0% {
+        transform: scaleX(.05);
+      }
+
+      80% {
+        transform: scaleX(1);
+      }
+
+      100% {
+        transform: scaleX(.05);
+      }
+    }
+
+    .scanner {
+      animation: scanner 4s linear infinite;
+    }
+
+    @keyframes scanner {
       from {
         transform: translateX(-200px);
       }
@@ -225,7 +216,7 @@
   <rect x="8"
         y="8"
         width="884"
-        height="504"
+        height="214"
         rx="16"
         fill="url(#bg)"
         stroke="#7e22ce"
@@ -234,7 +225,7 @@
   <rect x="10"
         y="10"
         width="880"
-        height="500"
+        height="210"
         rx="15"
         fill="none"
         stroke="#a855f7"
@@ -300,128 +291,126 @@
   </text>
 
 
-  <!-- MUSIC NOTES -->
+  <!-- LEFT NOTES -->
 
-  <text x="90"
-        y="190"
+  <text x="105"
+        y="145"
         class="purple note1"
-        font-size="24">
-
-    ♪
-
-  </text>
-
-  <text x="795"
-        y="195"
-        class="purple note2"
         font-size="22">
 
-    ♫
+    ♪
 
   </text>
 
-  <text x="110"
-        y="395"
+  <text x="135"
+        y="180"
         class="purple note2"
-        font-size="18">
+        font-size="17">
 
     ♫
 
   </text>
 
-  <text x="780"
-        y="400"
+
+  <!-- RIGHT NOTES -->
+
+  <text x="775"
+        y="145"
+        class="purple note2"
+        font-size="21">
+
+    ♫
+
+  </text>
+
+  <text x="745"
+        y="180"
         class="purple note1"
-        font-size="19">
+        font-size="17">
 
     ♪
 
   </text>
 
 
-  <!-- CARD GLOW -->
+  <!-- CENTER CONNECT PANEL -->
 
-  <rect x="105"
-        y="135"
-        width="690"
-        height="300"
-        rx="16"
-        fill="none"
-        stroke="#a855f7"
-        stroke-width="3"
-        filter="url(#glow)"
-        class="card-glow"/>
+  <rect x="250"
+        y="130"
+        width="400"
+        height="55"
+        rx="10"
+        fill="#090711"
+        stroke="#552273"/>
 
+  <text x="275"
+        y="153"
+        class="mono purple"
+        font-size="10">
 
-  <!-- CARD SHELL -->
+    user@lazarus:~$ spotify --connect
 
-  <g class="card-shell">
+  </text>
 
-    <rect x="110"
-          y="140"
-          width="680"
-          height="290"
-          rx="14"
-          fill="#08070c"
-          stroke="#552273"
-          stroke-width="1.5"/>
+  <text x="275"
+        y="173"
+        class="mono white"
+        font-size="10">
 
+    STREAM:
 
-    <!-- REAL SPOTIFY CARD -->
+  </text>
 
-    <image
-      x="120"
-      y="150"
-      width="660"
-      height="270"
-      preserveAspectRatio="xMidYMid meet"
-      href="https://data-card-for-spotify.herokuapp.com/api/card?user_id=swef3y2t5rracz1jvkrcg55tw"
-      xlink:href="https://data-card-for-spotify.herokuapp.com/api/card?user_id=swef3y2t5rracz1jvkrcg55tw"
-    />
+  <text x="335"
+        y="173"
+        class="mono green status"
+        font-size="10">
 
-  </g>
+    CONNECTED
+
+  </text>
 
 
   <!-- LEFT EQUALIZER -->
 
-  <g transform="translate(45 345)">
+  <g transform="translate(175 177)">
 
     <rect x="0"
-          y="-22"
+          y="-17"
           width="5"
-          height="22"
+          height="17"
           rx="2"
           fill="#c084fc"
           class="b1"/>
 
     <rect x="10"
-          y="-34"
+          y="-28"
           width="5"
-          height="34"
+          height="28"
           rx="2"
           fill="#9333ea"
           class="b2"/>
 
     <rect x="20"
-          y="-18"
+          y="-14"
           width="5"
-          height="18"
+          height="14"
           rx="2"
           fill="#c084fc"
           class="b3"/>
 
     <rect x="30"
-          y="-29"
+          y="-24"
           width="5"
-          height="29"
+          height="24"
           rx="2"
           fill="#a855f7"
           class="b4"/>
 
     <rect x="40"
-          y="-20"
+          y="-19"
           width="5"
-          height="20"
+          height="19"
           rx="2"
           fill="#c084fc"
           class="b5"/>
@@ -431,44 +420,44 @@
 
   <!-- RIGHT EQUALIZER -->
 
-  <g transform="translate(810 345)">
+  <g transform="translate(680 177)">
 
     <rect x="0"
-          y="-20"
+          y="-19"
           width="5"
-          height="20"
+          height="19"
           rx="2"
           fill="#c084fc"
           class="b5"/>
 
     <rect x="10"
-          y="-29"
+          y="-24"
           width="5"
-          height="29"
+          height="24"
           rx="2"
           fill="#a855f7"
           class="b4"/>
 
     <rect x="20"
-          y="-18"
+          y="-14"
           width="5"
-          height="18"
+          height="14"
           rx="2"
           fill="#c084fc"
           class="b3"/>
 
     <rect x="30"
-          y="-34"
+          y="-28"
           width="5"
-          height="34"
+          height="28"
           rx="2"
           fill="#9333ea"
           class="b2"/>
 
     <rect x="40"
-          y="-22"
+          y="-17"
           width="5"
-          height="22"
+          height="17"
           rx="2"
           fill="#c084fc"
           class="b1"/>
@@ -476,48 +465,29 @@
   </g>
 
 
-  <!-- BOTTOM STATUS -->
+  <!-- BOTTOM PROGRESS -->
 
-  <line x1="30"
-        y1="456"
-        x2="870"
-        y2="456"
-        stroke="#581c87"
-        opacity=".45"/>
+  <rect x="330"
+        y="200"
+        width="240"
+        height="6"
+        rx="3"
+        fill="#21112b"/>
 
-  <text x="35"
-        y="482"
-        class="mono purple"
-        font-size="9">
-
-    SPOTIFY_CORE.CONNECT
-
-  </text>
-
-  <text x="450"
-        y="482"
-        text-anchor="middle"
-        class="mono muted"
-        font-size="9">
-
-    external stream synchronized
-
-  </text>
-
-  <text x="817"
-        y="482"
-        class="mono green status"
-        font-size="9">
-
-    [ LIVE ]
-
-  </text>
+  <rect x="330"
+        y="200"
+        width="240"
+        height="6"
+        rx="3"
+        fill="url(#purple)"
+        class="progress"
+        filter="url(#glow)"/>
 
 
   <!-- SCANNER -->
 
   <rect x="0"
-        y="498"
+        y="214"
         width="170"
         height="1"
         fill="url(#purple)"
@@ -530,7 +500,7 @@
   <rect x="8"
         y="8"
         width="884"
-        height="504"
+        height="214"
         rx="16"
         fill="url(#scanlines)"
         pointer-events="none"/>
