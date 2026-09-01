@@ -1,5 +1,6 @@
-<svg width="900" height="260" viewBox="0 0 900 260"
-     xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="520" viewBox="0 0 900 520"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <defs>
 
@@ -27,15 +28,14 @@
              width="4"
              height="4"
              patternUnits="userSpaceOnUse">
-
       <rect width="4"
             height="1"
             fill="#ffffff"
             opacity=".018"/>
-
     </pattern>
 
   </defs>
+
 
   <style>
 
@@ -63,16 +63,13 @@
       fill: #a1a1aa;
     }
 
-
-    /* TITLE */
-
     .title {
       animation: titleGlow 2.5s ease-in-out infinite;
     }
 
     @keyframes titleGlow {
       0%,100% {
-        opacity: .7;
+        opacity: .65;
       }
 
       50% {
@@ -80,27 +77,6 @@
         filter: url(#glow);
       }
     }
-
-
-    /* DISC */
-
-    .disc {
-      transform-origin: 160px 150px;
-      animation: spin 10s linear infinite;
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-
-    /* STATUS */
 
     .status {
       animation: pulse 1.5s ease-in-out infinite;
@@ -116,8 +92,34 @@
       }
     }
 
+    .card-shell {
+      animation: floatCard 4s ease-in-out infinite;
+      transform-origin: 450px 295px;
+    }
 
-    /* BARS */
+    @keyframes floatCard {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .card-glow {
+      animation: glowCard 2.5s ease-in-out infinite;
+    }
+
+    @keyframes glowCard {
+      0%,100% {
+        opacity: .2;
+      }
+
+      50% {
+        opacity: .75;
+      }
+    }
 
     .b1 {
       animation: bar1 .6s ease-in-out infinite alternate;
@@ -151,17 +153,17 @@
 
     @keyframes bar2 {
       from { transform: scaleY(.5); }
-      to   { transform: scaleY(1.3); }
+      to   { transform: scaleY(1.25); }
     }
 
     @keyframes bar3 {
       from { transform: scaleY(.25); }
-      to   { transform: scaleY(.8); }
+      to   { transform: scaleY(.85); }
     }
 
     @keyframes bar4 {
       from { transform: scaleY(.4); }
-      to   { transform: scaleY(1.15); }
+      to   { transform: scaleY(1.1); }
     }
 
     @keyframes bar5 {
@@ -169,20 +171,17 @@
       to   { transform: scaleY(.9); }
     }
 
-
-    /* NOTES */
-
     .note1 {
-      animation: noteFloat1 4s ease-in-out infinite;
+      animation: note1 4s ease-in-out infinite;
     }
 
     .note2 {
-      animation: noteFloat2 5s ease-in-out infinite;
+      animation: note2 5s ease-in-out infinite;
     }
 
-    @keyframes noteFloat1 {
+    @keyframes note1 {
       0%,100% {
-        opacity: .2;
+        opacity: .15;
         transform: translateY(0);
       }
 
@@ -192,9 +191,9 @@
       }
     }
 
-    @keyframes noteFloat2 {
+    @keyframes note2 {
       0%,100% {
-        opacity: .15;
+        opacity: .1;
         transform: translateY(0);
       }
 
@@ -203,31 +202,6 @@
         transform: translateY(-10px);
       }
     }
-
-
-    /* PROGRESS */
-
-    .progress {
-      transform-origin: left;
-      animation: progress 8s linear infinite;
-    }
-
-    @keyframes progress {
-      0% {
-        transform: scaleX(.05);
-      }
-
-      75% {
-        transform: scaleX(1);
-      }
-
-      100% {
-        transform: scaleX(.05);
-      }
-    }
-
-
-    /* SCANNER */
 
     .scanner {
       animation: scan 4s linear infinite;
@@ -251,7 +225,7 @@
   <rect x="8"
         y="8"
         width="884"
-        height="244"
+        height="504"
         rx="16"
         fill="url(#bg)"
         stroke="#7e22ce"
@@ -260,11 +234,11 @@
   <rect x="10"
         y="10"
         width="880"
-        height="240"
+        height="500"
         rx="15"
         fill="none"
         stroke="#a855f7"
-        opacity=".18"
+        opacity=".16"
         filter="url(#glow)"/>
 
 
@@ -279,18 +253,18 @@
 
   </text>
 
-  <circle cx="810"
+  <circle cx="805"
           cy="34"
           r="4"
           fill="#55ff88"
           class="status"/>
 
-  <text x="822"
+  <text x="817"
         y="38"
         class="mono green"
         font-size="9">
 
-    ONLINE
+    STREAMING
 
   </text>
 
@@ -299,7 +273,7 @@
         x2="870"
         y2="55"
         stroke="url(#purple)"
-        opacity=".55"/>
+        opacity=".5"/>
 
 
   <!-- TITLE -->
@@ -315,133 +289,115 @@
 
   </text>
 
+  <text x="450"
+        y="112"
+        text-anchor="middle"
+        class="mono muted"
+        font-size="9">
 
-  <!-- LEFT DISC -->
+    LIVE AUDIO FEED // LAZARUS CORE
 
-  <g class="disc">
-
-    <circle cx="160"
-            cy="156"
-            r="58"
-            fill="#08070c"
-            stroke="#7e22ce"
-            stroke-width="2"
-            filter="url(#glow)"/>
-
-    <circle cx="160"
-            cy="156"
-            r="47"
-            fill="none"
-            stroke="#3b1b4c"
-            stroke-width="2"/>
-
-    <circle cx="160"
-            cy="156"
-            r="35"
-            fill="none"
-            stroke="#3b1b4c"
-            stroke-width="2"/>
-
-    <circle cx="160"
-            cy="156"
-            r="23"
-            fill="#160b20"
-            stroke="#a855f7"
-            stroke-width="2"/>
-
-    <circle cx="160"
-            cy="156"
-            r="7"
-            fill="#c084fc"
-            filter="url(#glow)"/>
-
-  </g>
+  </text>
 
 
   <!-- MUSIC NOTES -->
 
-  <text x="95"
-        y="120"
+  <text x="90"
+        y="190"
         class="purple note1"
-        font-size="21">
+        font-size="24">
 
     ♪
 
   </text>
 
-  <text x="220"
-        y="130"
+  <text x="795"
+        y="195"
         class="purple note2"
-        font-size="19">
+        font-size="22">
 
     ♫
 
   </text>
 
+  <text x="110"
+        y="395"
+        class="purple note2"
+        font-size="18">
 
-  <!-- RIGHT PANEL -->
-
-  <rect x="280"
-        y="115"
-        width="540"
-        height="87"
-        rx="10"
-        fill="#090711"
-        stroke="#552273"/>
-
-  <text x="305"
-        y="140"
-        class="mono purple"
-        font-size="11">
-
-    user@lazarus:~$ spotify --connect
+    ♫
 
   </text>
 
-  <text x="305"
-        y="165"
-        class="mono white"
-        font-size="11">
+  <text x="780"
+        y="400"
+        class="purple note1"
+        font-size="19">
 
-    STREAM STATUS:
-
-  </text>
-
-  <text x="410"
-        y="165"
-        class="mono green"
-        font-size="11">
-
-    CONNECTED
-
-  </text>
-
-  <text x="305"
-        y="187"
-        class="mono muted"
-        font-size="10">
-
-    external Spotify feed initialized...
+    ♪
 
   </text>
 
 
-  <!-- EQUALIZER -->
+  <!-- CARD GLOW -->
 
-  <g transform="translate(725 181)">
+  <rect x="105"
+        y="135"
+        width="690"
+        height="300"
+        rx="16"
+        fill="none"
+        stroke="#a855f7"
+        stroke-width="3"
+        filter="url(#glow)"
+        class="card-glow"/>
+
+
+  <!-- CARD SHELL -->
+
+  <g class="card-shell">
+
+    <rect x="110"
+          y="140"
+          width="680"
+          height="290"
+          rx="14"
+          fill="#08070c"
+          stroke="#552273"
+          stroke-width="1.5"/>
+
+
+    <!-- REAL SPOTIFY CARD -->
+
+    <image
+      x="120"
+      y="150"
+      width="660"
+      height="270"
+      preserveAspectRatio="xMidYMid meet"
+      href="https://data-card-for-spotify.herokuapp.com/api/card?user_id=swef3y2t5rracz1jvkrcg55tw"
+      xlink:href="https://data-card-for-spotify.herokuapp.com/api/card?user_id=swef3y2t5rracz1jvkrcg55tw"
+    />
+
+  </g>
+
+
+  <!-- LEFT EQUALIZER -->
+
+  <g transform="translate(45 345)">
 
     <rect x="0"
-          y="-23"
+          y="-22"
           width="5"
-          height="23"
+          height="22"
           rx="2"
           fill="#c084fc"
           class="b1"/>
 
     <rect x="10"
-          y="-32"
+          y="-34"
           width="5"
-          height="32"
+          height="34"
           rx="2"
           fill="#9333ea"
           class="b2"/>
@@ -455,9 +411,9 @@
           class="b3"/>
 
     <rect x="30"
-          y="-28"
+          y="-29"
           width="5"
-          height="28"
+          height="29"
           rx="2"
           fill="#a855f7"
           class="b4"/>
@@ -473,39 +429,87 @@
   </g>
 
 
-  <!-- BOTTOM BAR -->
+  <!-- RIGHT EQUALIZER -->
 
-  <text x="280"
-        y="225"
-        class="mono muted"
+  <g transform="translate(810 345)">
+
+    <rect x="0"
+          y="-20"
+          width="5"
+          height="20"
+          rx="2"
+          fill="#c084fc"
+          class="b5"/>
+
+    <rect x="10"
+          y="-29"
+          width="5"
+          height="29"
+          rx="2"
+          fill="#a855f7"
+          class="b4"/>
+
+    <rect x="20"
+          y="-18"
+          width="5"
+          height="18"
+          rx="2"
+          fill="#c084fc"
+          class="b3"/>
+
+    <rect x="30"
+          y="-34"
+          width="5"
+          height="34"
+          rx="2"
+          fill="#9333ea"
+          class="b2"/>
+
+    <rect x="40"
+          y="-22"
+          width="5"
+          height="22"
+          rx="2"
+          fill="#c084fc"
+          class="b1"/>
+
+  </g>
+
+
+  <!-- BOTTOM STATUS -->
+
+  <line x1="30"
+        y1="456"
+        x2="870"
+        y2="456"
+        stroke="#581c87"
+        opacity=".45"/>
+
+  <text x="35"
+        y="482"
+        class="mono purple"
         font-size="9">
 
-    AUDIO CORE
+    SPOTIFY_CORE.CONNECT
 
   </text>
 
-  <rect x="355"
-        y="218"
-        width="280"
-        height="8"
-        rx="4"
-        fill="#21112b"/>
+  <text x="450"
+        y="482"
+        text-anchor="middle"
+        class="mono muted"
+        font-size="9">
 
-  <rect x="355"
-        y="218"
-        width="280"
-        height="8"
-        rx="4"
-        fill="url(#purple)"
-        class="progress"
-        filter="url(#glow)"/>
+    external stream synchronized
 
-  <text x="650"
-        y="226"
+  </text>
+
+  <text x="817"
+        y="482"
         class="mono green status"
         font-size="9">
 
-    LIVE
+    [ LIVE ]
 
   </text>
 
@@ -513,7 +517,7 @@
   <!-- SCANNER -->
 
   <rect x="0"
-        y="239"
+        y="498"
         width="170"
         height="1"
         fill="url(#purple)"
@@ -526,7 +530,7 @@
   <rect x="8"
         y="8"
         width="884"
-        height="244"
+        height="504"
         rx="16"
         fill="url(#scanlines)"
         pointer-events="none"/>
