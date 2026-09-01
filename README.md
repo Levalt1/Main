@@ -81,22 +81,5 @@
 <h2 align="center">⚡ Lazarus Empires</h2>
 
 <div align="center">
-
-<img src="<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=17&duration=1100&pause=350&color=A855F7&center=true&vCenter=true&repeat=true&width=850&height=55&lines=%E2%9F%A9+AWAKENING+LAZARUS+PROTOCOL+%E2%9F%A8;%E2%9F%A9+DECODING+MEMORY+SECTORS...+%E2%9F%A8;%E2%9F%A9+BREACHING+SYSTEM+BOUNDARIES...+%E2%9F%A8;%E2%9F%A9+RECONSTRUCTING+FROM+THE+VOID...+%E2%9F%A8;%E2%9F%A9+LAZARUS+EMPIRES+%2F%2F+RESURRECTED+%E2%9F%A8" alt="Lazarus Protocol" />" />
-
+  <img src="./assets/lazarus-terminal.svg" width="900" alt="Lazarus Terminal">
 </div>
-
-## ⚡ 0x
-
-```text
- $$$$$$\             $$$$$$$\                                              $$\
-$$  __$$\            $$  __$$\                                             \__|
-$$ /  $$ |$$\   $$\  $$ |  $$ |$$\   $$\ $$$$$$$\   $$$$$$\  $$$$$$\$$$$\  $$\  $$$$$$$\
-$$ |  $$ |\$$\ $$  | $$ |  $$ |$$ |  $$ |$$  __$$\  \____$$\ $$  _$$  _$$\ $$ |$$  _____|
-$$ |  $$ | \$$$$  /  $$ |  $$ |$$ |  $$ |$$ |  $$ | $$$$$$$ |$$ / $$ / $$ |$$ |$$ /
-$$ |  $$ | $$  $$<   $$ |  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ | $$ | $$ |$$ |$$ |
- $$$$$$  |$$  /\$$\  $$$$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ | $$ | $$ |$$ |\$$$$$$$\
- \______/ \__/  \__| \_______/  \____$$ |\__|  \__| \_______|\__| \__| \__|\__| \_______|
-                               $$\   $$ |
-                               \$$$$$$  |
-                                \______/
