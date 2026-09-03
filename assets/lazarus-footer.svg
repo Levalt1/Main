@@ -1,0 +1,127 @@
+<svg width="900" height="230" viewBox="0 0 900 230"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07030d"/>
+      <stop offset="50%" stop-color="#12051f"/>
+      <stop offset="100%" stop-color="#07030d"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font: 700 22px monospace;
+      fill: #d8b4fe;
+      letter-spacing: 2px;
+    }
+
+    .text {
+      font: 15px monospace;
+      fill: #c084fc;
+    }
+
+    .small {
+      font: 12px monospace;
+      fill: #8b5cf6;
+    }
+
+    .online {
+      font: 700 13px monospace;
+      fill: #55ff88;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .energy {
+      fill: none;
+      stroke: #a855f7;
+      stroke-width: 2;
+      stroke-dasharray: 18 12;
+      animation: move 2s linear infinite;
+      filter: url(#glow);
+    }
+
+    @keyframes move {
+      to {
+        stroke-dashoffset: -60;
+      }
+    }
+
+    @keyframes pulse {
+      0%,100% { opacity: .45; }
+      50% { opacity: 1; }
+    }
+  </style>
+
+  <rect
+    x="2"
+    y="2"
+    width="896"
+    height="226"
+    rx="18"
+    fill="url(#bg)"
+    stroke="#9333ea"
+    stroke-width="2"
+  />
+
+  <path
+    d="M25 42 H250 M650 42 H875"
+    class="energy"
+  />
+
+  <text
+    x="450"
+    y="50"
+    text-anchor="middle"
+    class="title">
+    ⚡ LAZARUS // SYSTEM STATUS
+  </text>
+
+  <text
+    x="450"
+    y="98"
+    text-anchor="middle"
+    class="text">
+    BUILD • BREAK • UNDERSTAND • REBUILD
+  </text>
+
+  <text
+    x="450"
+    y="135"
+    text-anchor="middle"
+    class="small">
+    C++ // REVERSE ENGINEERING // CYBERSECURITY
+  </text>
+
+  <circle
+    cx="382"
+    cy="172"
+    r="5"
+    fill="#55ff88"
+    filter="url(#glow)"
+  />
+
+  <text
+    x="398"
+    y="177"
+    class="online">
+    SYSTEM ONLINE
+  </text>
+
+  <text
+    x="450"
+    y="207"
+    text-anchor="middle"
+    class="small">
+    root@lazarus:~$ _
+  </text>
+
+</svg>
