@@ -16,3 +16,12 @@
 </a>
 
 </div>
+<br><br>
+
+<div align="center">
+  <img
+    src="./assets/lazarus-footer.svg"
+    width="900"
+    alt="Lazarus System Status"
+  />
+</div>
